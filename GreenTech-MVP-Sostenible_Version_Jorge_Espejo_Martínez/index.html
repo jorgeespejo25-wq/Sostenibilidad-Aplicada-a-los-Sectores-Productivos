@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salvemos el Planeta - GreenTech</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f4fdf4;
+      }
+      .hero {
+        /* se recomienda sustituir el url de la imagen por la imagen subuda en este proyecto */
+        background-image: url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=3000&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+      }
+      .hero h1,
+      .hero p,
+      .hero .btn {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 900;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        font-weight: 400;
+        margin-bottom: 2rem;
+        max-width: 80%;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #28a745;
+        border-color: #1e7e34;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        text-decoration: none;
+      }
+      .btn:hover {
+        background-color: #1e7e34;
+        transform: scale(1);
+      }
+      .footer {
+        background-color: #1a3b2f;
+        color: #cfe8cf;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #2e5a46;
+      }
+      @media (max-width: 768px) {
+        .hero p {
+          max-width: 95%;
+        }
+        .btn {
+          padding: 0.7rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <h1 class="display-1 fw-bold">Salvemos el Planeta</h1>
+        <p class="lead fs-3 mt-3">Únete a la revolución verde de GreenTech.</p>
+        <!--
+          <img src="GreenTech-MVP-Sostenible_Version_Jorge_Espejo_Martínez/photo-1542601906990-b4d3fb778b09.webp"
+               alt="Dos manos sosteniendo un trozo de tierra con una planta en medio"/>
+        -->
+        <button class="btn">
+          <i class="fa-solid fa-leaf"></i> Quiero ayudar
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>GreenTech Solutions &copy;</p>
+    </footer>
+
+    <script>
+      // Año actual con la API nativa de JavaScript
+      const setCurrentYear = () => {
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+          const currentYear = new Intl.DateTimeFormat("es-ES", {
+            year: "numeric",
+          }).format(new Date());
+          yearSpan.textContent = currentYear;
+        }
+      };
+      // Función para botón 
+      const setupHelpButton = () => {
+        const button = document.getElementById("helpButton");
+        if (button) {
+          button.addEventListener("click", () => {
+            alert(
+              "¡Gracias por tu interés! Cada pequeño gesto cuenta. Pronto recibirás más información.",
+            );
+          });
+        }
+      };
+      // Se inicializa cuando DOM esta cargado
+      document.addEventListener("DOMContentLoaded", () => {
+        setCurrentYear();
+        setupHelpButton();
+        console.log(
+          "MVP Sostenible cargado con éxito. Sin bloatware, solo código eficiente.",
+        );
+      });
+    </script>
+  </body>
+</html>
