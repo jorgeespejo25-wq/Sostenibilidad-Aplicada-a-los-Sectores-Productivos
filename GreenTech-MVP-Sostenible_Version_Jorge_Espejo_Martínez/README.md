@@ -14,7 +14,7 @@ Este proyecto contiene la refactorización del MVP de GreenTech Solutions. El ob
 
 ## Refactorización
 1. **Eliminar Bootstrap y FontAwesome:** se sustituyen por el estilo visual con CSS nativo.
-2. **Optimizar las fuentes:** se segue utilizando Montserrat, pero solo cargando los estilos que necesitemos (normalmente 400 y 700). Además usaré font-display: swap para que el texto sea visible mientras se carga la fuente, mejorando de esta forma la percepción de velocidad.
+2. **Optimizar las fuentes:** se sigue utilizando Montserrat, pero solo cargando los estilos que necesitemos (normalmente 400 y 700). Además usaré font-display: swap para que el texto sea visible mientras se carga la fuente, mejorando de esta forma la percepción de velocidad.
 3. **Eliminar jQuery y Moment.js:** se usará JavaScript puro (document.addEventListener, Date nativo con Intl.DateTimeFormat).
 4. **Optimización de la imagen:** se redimenciona la imagen porque la mayoría de pantallas, posee entre 1920px o 1200px. Por otro lado, se comprime la imagen en un formato mejor como WebP. Finalmente se implementar Lazy Loading para que la imagen carge cuando el usuario se vaya acercando a la imagen.
 5. **Mejorar la accesibilidad y estructura:** se usa HTML semántico para el footer, de esta forma se evita utilizar JavaScript.

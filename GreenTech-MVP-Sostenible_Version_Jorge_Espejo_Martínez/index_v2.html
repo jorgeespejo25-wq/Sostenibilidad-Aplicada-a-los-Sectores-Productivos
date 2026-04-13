@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Salvemos el Planeta - GreenTech</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <h1 class="display-1 fw-bold">Salvemos el Planeta</h1>
+        <p class="lead fs-3 mt-3">Únete a la revolución verde de GreenTech.</p>
+        <!--
+          <img src="GreenTech-MVP-Sostenible_Version_Jorge_Espejo_Martínez/photo-1542601906990-b4d3fb778b09.webp"
+               alt="Dos manos sosteniendo un trozo de tierra con una planta en medio"/>
+        -->
+        <button class="btn" id="helpButton">
+          <i class="fa-solid fa-leaf"></i> Quiero ayudar
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>GreenTech Solutions &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script>
+      // Año actual con la API nativa de JavaScript
+      const setCurrentYear = () => {
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+          const currentYear = new Intl.DateTimeFormat("es-ES", {
+            year: "numeric",
+          }).format(new Date());
+          yearSpan.textContent = currentYear;
+        }
+      };
+      // Función para botón de ayuda
+      const setupHelpButton = () => {
+        const button = document.getElementById("helpButton");
+        if (button) {
+          button.addEventListener("click", () => {
+            alert(
+              "¡Gracias por tu interés! Cada pequeño gesto cuenta. Pronto recibirás más información.",
+            );
+          });
+        }
+      };
+      // Se inicializa cuando DOM esta cargado
+      document.addEventListener("DOMContentLoaded", () => {
+        setCurrentYear();
+        setupHelpButton();
+        console.log(
+          "MVP Sostenible cargado con éxito. Sin bloatware, solo código eficiente.",
+        );
+      });
+      /**/
+    </script>
+  </body>
+</html>
